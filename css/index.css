@@ -196,9 +196,24 @@ span {
 }
 
 #shouye .daohang .titles span {
-  padding-top: 20px;
+  padding: 10px 0;
   font-size: 18px;
   color: #fff;
+  cursor: pointer;
+}
+
+#shouye .daohang .titles span.active {
+  padding: 8px 0;
+  border: 2px solid #ffb900;
+}
+
+#shouye .daohang .icon-menu {
+  cursor: pointer;
+}
+
+#shouye .daohang .icon-menu:hover {
+  transform: scale(1.1, 1.1);
+  transition: transform .8s ease;
 }
 
 /* 关于我 */

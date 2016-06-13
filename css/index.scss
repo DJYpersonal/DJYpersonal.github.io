@@ -126,9 +126,21 @@ $images: bg1,bg2,bg3,bg4,bg5,bg6;
 		color: #ffb900;
 	}
 	.daohang .titles span{
-        padding-top: 20px;
+        padding: 10px 0;
         font-size: 18px;
         color: #fff;
+        cursor: pointer;
+	}
+	.daohang .titles span.active{
+        	padding: 8px 0;
+        	border: 2px solid #ffb900;
+        }
+	.daohang .icon-menu{
+		cursor: pointer;
+		&:hover{
+			transform: scale(1.1,1.1);
+			transition: transform .8s ease;
+		}
 	}
 }
 
