@@ -347,23 +347,22 @@ span {
   0% {
     transform: scale(1, 1);
   }
-  100% {
-    transform: scale(1.5, 1.5);
+  25% {
+    transform: scale(1.3, 1.3);
   }
-}
-
-@keyframes quan2 {
-  0% {
-    transfrom: scale(1.5, 1.5);
+  50% {
+    transform: scale(1, 1);
+  }
+  75% {
+    transform: scale(1.3, 1.3);
   }
   100% {
-    transfrom: scale(1, 1);
+    transform: scale(1, 1);
   }
 }
 
 #gongzuo {
   width: 100%;
-  padding: 80px 0px;
   /* .cards{
 		width:600px;
 		height: 400px;
@@ -374,7 +373,7 @@ span {
 }
 
 #gongzuo .card .card-content p {
-  font-size: 16px;
+  font-size: 15px;
 }
 
 #gongzuo .cards1 {
@@ -389,13 +388,16 @@ span {
 }
 
 #gongzuo .cards1 .quan {
-  width: 270px;
-  height: 270px;
+  width: 290px;
+  height: 290px;
   border-radius: 50%;
   border: 3px solid #ffb900;
-  position: relative;
-  transform: scale(1, 1);
-  animation: quan2 1s ease infinite;
+  position: absolute;
+  margin: auto;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
 }
 
 #gongzuo .cards1 .info {
@@ -437,15 +439,58 @@ span {
   top: 120px;
 }
 
+#gongzuo .cards2 {
+  width: 300px;
+  position: absolute;
+  top: 50px;
+  left: 70px;
+}
+
+#gongzuo .cards3 {
+  width: 300px;
+  position: absolute;
+  bottom: 50px;
+  left: 70px;
+}
+
+#gongzuo .cards4 {
+  width: 300px;
+  position: absolute;
+  top: 50px;
+  right: 70px;
+}
+
+#gongzuo .cards5 {
+  width: 300px;
+  position: absolute;
+  bottom: 50px;
+  right: 70px;
+}
+
 #section4.active #gongzuo .cards1 .quan {
-  transform: scale(1.5, 1.5);
-  animation: quan 1s ease infinite;
+  animation: quan 8s ease infinite;
 }
 
 /* 作品展示 */
 #zuopin {
   width: 100%;
-  padding: 100px 200px;
+  padding: 80px 200px;
+}
+
+#zuopin .banner {
+  margin-top: 100px;
+}
+
+#zuopin .banner .swiper-slide a {
+  display: block;
+  height: 200px;
+  width: 200px;
+  margin: 0 65px;
+}
+
+#zuopin .banner .swiper-slide img {
+  width: 200px;
+  height: 200px;
 }
 
 /* 联系方式 */
