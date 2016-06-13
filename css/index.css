@@ -284,11 +284,37 @@ span {
   margin: auto;
 }
 
-#jineng ul li {
+#jineng ul .skill {
   width: 100%;
   height: 60px;
   line-height: 60px;
   position: relative;
+  opacity: 0;
+  transform: translateX(-120%);
+}
+
+#jineng ul .skill.html {
+  transition: all 1s ease;
+}
+
+#jineng ul .skill.jquery {
+  transition: all 1.5s ease;
+}
+
+#jineng ul .skill.js {
+  transition: all 2s ease;
+}
+
+#jineng ul .skill.angular {
+  transition: all 2.5s ease;
+}
+
+#jineng ul .skill.xiangying {
+  transition: all 3s ease;
+}
+
+#jineng ul .skill.yidong {
+  transition: all 3.5s ease;
 }
 
 #jineng ul li .name {
@@ -319,26 +345,61 @@ span {
 }
 
 #jineng ul li.html .percent {
-  width: 90%;
+  width: 0;
+  transition: width 3s ease .5s;
 }
 
 #jineng ul li.jquery .percent {
-  width: 80%;
+  width: 0;
+  transition: width 3s ease .5s;
 }
 
 #jineng ul li.js .percent {
-  width: 77%;
+  width: 0;
+  transition: width 3s ease .5s;
 }
 
 #jineng ul li.angular .percent {
-  width: 65%;
+  width: 0;
+  transition: width 3s ease .5s;
 }
 
 #jineng ul li.xiangying .percent {
-  width: 72%;
+  width: 0;
+  transition: width 3s ease .5s;
 }
 
 #jineng ul li.yidong .percent {
+  width: 0;
+  transition: width 3s ease .5s;
+}
+
+#section3.active #jineng ul .skill {
+  opacity: 1;
+  transform: translateX(0%);
+}
+
+#section3.active #jineng ul li.html .percent {
+  width: 90%;
+}
+
+#section3.active #jineng ul li.jquery .percent {
+  width: 80%;
+}
+
+#section3.active #jineng ul li.js .percent {
+  width: 77%;
+}
+
+#section3.active #jineng ul li.angular .percent {
+  width: 65%;
+}
+
+#section3.active #jineng ul li.xiangying .percent {
+  width: 72%;
+}
+
+#section3.active #jineng ul li.yidong .percent {
   width: 70%;
 }
 
