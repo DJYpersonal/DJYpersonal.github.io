@@ -1,0 +1,414 @@
+%resize{
+	margin: 0;
+	padding: 0;
+}
+body{
+	@extend %resize;
+	font-family: "Microsoft Yahei",verdan,Arial;
+	font-size: 12px;
+	color: #000;
+}
+ul,li,p,h1,h2,h3,h4,h5,h6{
+	@extend %resize;
+	list-style: none;
+}
+img{
+	border: 0;
+}
+span{
+	display: block;
+}
+*{
+	box-sizing: border-box;
+}
+
+$image-path : '../image/';
+$small : 414px;
+/* 背景图片 */
+$images: bg1,bg2,bg3,bg4,bg5,bg6;
+	@for $i from 1 through length($images){
+		.section:nth-child(#{$i}){
+			background-size: cover;
+			background-image: url($image-path + nth($images,$i) + '.png');
+			@media screen and( max-width: $small ){
+                background-image: url($image-path + nth($images,$i) + '_small.png');
+			}
+		}
+	}
+
+
+.fp-tableCell{
+	display: block;
+}
+.section #title{
+		color: #FFBB02;
+		font-size: 25px;
+		text-align: center;
+		font-weight: normal;
+	}
+
+/* 首页 */
+#shouye{
+	width: 100%;
+	padding: 100px;
+	.logo{
+		width: 200px;
+		height: 60px;
+		background: url( $image-path + 'deng.png') no-repeat;
+		background-size: 200px;
+	}
+	.zuoyouming{
+		width: 250px;
+		height: 250px;
+		background: #ffb900;
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		margin: auto;
+		padding: 30px 10px;
+		z-index: 1;
+	}
+	.zuoyouming span{
+		display: block;
+		margin-bottom: 10px;
+	}
+	.zuoyouming .china{
+		font-size: 25px;
+		color: #2D2202;
+		font-weight: bold;
+	}
+	.zuoyouming .china-b{
+		float: right;
+	}
+	.zuoyouming .english{
+		margin-top: 20px;
+		padding-left: 40px;
+		font-size: 20px;
+		color: #fff;
+		font-family: Arial;
+		float: left;
+	}
+	.border{
+		width: 130px;
+		height: 130px;
+		border: 3px solid #FFD101;
+		position: absolute;
+		left: 700px;
+		top: 170px;
+	}
+	.sekuai{
+		width: 50px;
+		height: 50px;
+		background: #ffb900;
+		position: absolute;
+		left: 535px;
+		bottom: 165px;
+	}
+	.touxiang{
+		width: 120px;
+		height: 120px;
+		position: absolute;
+		margin: auto;
+		top: 280px;
+		left: 460px;
+		z-index: 2;
+	}
+	.daohang{
+		width: 115px;
+		height: auto;
+		text-align: center;
+		margin-top: 20px;
+	}
+	.daohang .iconfont{
+		font-size: 25px;
+		color: #ffb900;
+	}
+	.daohang .titles span{
+        padding-top: 20px;
+        font-size: 18px;
+        color: #fff;
+	}
+}
+
+/* 关于我 */
+#about{
+	width: 100%;
+	padding: 150px 200px;
+	.zhiwei .wrapper{
+		width: 120px;
+		height: 120px;
+		border: 5px solid #ffb900;
+		border-right: none;
+	}
+	.zhiwei .content{
+		color: #fff;
+		font-size: 18px;
+		position: absolute;
+		left: 220px;
+		top: 185px;
+	}
+	.zhiwei .border1,.zhiwei .border2{
+		width: 5px;
+		height: 20px;
+		background: #ffb900;
+	}
+	.zhiwei .border1{
+		position: absolute;
+		left: 315px;
+		top: 165px;
+	}
+	.zhiwei .border2{
+		position: absolute;
+		left: 315px;
+		top: 264px;
+	}
+	.right .wrapper{
+		width: 300px;
+		height: 300px;
+		border: 3px solid #585B6A;
+		position: absolute;
+		top: 200px;
+		right: 220px;
+	}
+	.right .touxiang{
+		width: 250px;
+		height: 250px;
+		background: #fff;
+		position: absolute;
+		top: 225px;
+        right: 200px;
+	}
+	.jieshao{
+		padding-top: 20px;
+	}
+	.jieshao span{
+        padding-top: 20px;
+        font-size: 18px;
+        color: #fff;
+	}
+}
+
+/* 个人技能 */
+#jineng{
+	width: 100%;
+	padding: 80px 0px;
+	ul{
+		width: 600px;
+		height: 360px;
+		position:absolute;
+		bottom: 100px;
+		left: 0;
+		right: 0;
+		margin: auto;
+	}
+	ul li{
+		width: 100%;
+		height: 60px;
+		line-height: 60px;
+		position: relative;
+	}
+	ul li .name{
+		width: 30%;
+		height: 60px;
+        color: #fff;
+        font-size: 20px;
+        float: left;
+	}
+    ul li .biankuang{
+    	float: left;
+    	border: 2px solid #FAED1B;
+    	width: 65%;
+    	height: 17px;
+    	border-radius: 30px;
+    	position: absolute;
+    	margin: auto;
+    	top: 0;
+    	bottom: 0;
+    	left: 180px;
+    	overflow: hidden;
+    }
+    ul li.skill .percent{
+    	height: 13px;
+    	background: #FAED1B;
+    }
+    ul li.html .percent{
+    	width: 90%;
+    }
+    ul li.jquery .percent{
+    	width: 80%;
+    }
+    ul li.js .percent{
+    	width: 77%;
+    }
+    ul li.angular .percent{
+    	width: 65%;
+    }
+    ul li.xiangying .percent{
+    	width: 72%;
+    }
+    ul li.yidong .percent{
+    	width: 70%;
+    }
+}
+
+/* 工作展示 */
+@keyframes quan{
+	0%{
+		transform: scale(1,1);
+	}
+	100%{
+		transform: scale(1.5,1.5);
+	}
+}
+@keyframes quan2{
+	0%{
+		transfrom: scale(1.5,1.5);
+	}
+	100%{
+		transfrom: scale(1,1);
+	}
+}
+#gongzuo{
+	width: 100%;
+	padding: 80px 0px;
+	/* .cards{
+		width:600px;
+		height: 400px;
+		border: 1px solid #fff;
+		margin: 0 auto;
+		margin-top: 50px;
+	} */
+	.card .card-content p{
+		font-size: 16px;
+	}
+	.cards1{
+		width: 290px;
+		height: 290px;
+		position: absolute;
+		margin: auto;
+		left: 0;
+		right: 0;
+		top: 0;
+		bottom: 0;
+	}
+	.cards1 .quan{
+		width: 270px;
+		height: 270px;
+		border-radius: 50%;
+		border: 3px solid #ffb900;
+		position: relative;
+		transform: scale(1,1);
+		animation: quan2 1s ease infinite;
+	}
+	.cards1 .info{
+		font-size: 14px;
+		line-height: 30px;
+		height: 220px;
+		width: 220px;
+		background: #fff;
+		border-radius: 50%;
+		position: absolute;
+		margin: auto;
+		left: 0;
+		right: 0;
+		top: 0;
+		bottom: 0;
+	}
+	.cards1 .info p{
+		position: absolute;
+		&:nth-child(1){
+		   left: 40px;
+		   top: 30px;
+	    }
+	    &:nth-child(2){
+	       left: 40px;
+	       top: 60px;
+	    }
+	    &:nth-child(3){
+	    	left: 40px;
+	    	top: 90px;
+	    }
+	    &:nth-child(4){
+	    	left: 40px;
+	    	top: 120px;
+	    }
+	}	  
+}
+#section4.active #gongzuo{
+    .cards1 .quan{
+    	transform: scale(1.5,1.5);
+    	animation: quan 1s ease infinite;
+    }
+}
+
+/* 作品展示 */
+#zuopin{
+	width: 100%;
+	padding: 100px 200px;
+}
+
+/* 联系方式 */
+#contact{
+	padding: 100px 0;
+	.wrapper{
+		width: 600px;
+		height: 385px;
+		position: relative;
+		margin: auto;
+	}
+	.wrapper-t{
+		width: 600px;
+		height: 155px;
+		border: 5px solid #ffb900;
+		position: absolute;
+		top: 0;
+		border-bottom: 0;
+	}
+	.wrapper-b{
+		width: 600px;
+		height: 80px;
+		border: 5px solid #ffb900;
+		position: absolute;
+		bottom: 0;
+		border-top: 0;
+	}
+	.con{
+		width: 600px;
+		height: 385px;
+		position: relative;
+	}
+	.con .top{
+		position: absolute;
+		top: 80px;
+		font-size: 30px;
+		left: 0;
+		right: 0;
+		margin: auto;
+		text-align: center;
+		padding: 0 145px;
+		font-weight: bold;
+	}
+	.con .top span{
+		display: inline-block;
+	}
+	.contact{
+		color: #ffb900;
+	}
+	.forme{
+		color: #fff;
+	}
+	.con .fangshi{
+		color: #ffb900;
+		font-size: 20px;
+		bottom: 80px;
+		position: absolute;
+		left: 0;
+		right: 0;
+		padding: 0 145px;
+	}
+	.con .fangshi span{
+		padding-bottom: 10px;
+	}
+}
