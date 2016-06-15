@@ -7,7 +7,6 @@ $(function($){
 		slidesPerGroup : 3,
 		prevButton:'.swiper-button-prev',
         nextButton:'.swiper-button-next',
-        
 	})
 })
 

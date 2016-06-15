@@ -335,6 +335,104 @@ $images: bg1,bg2,bg3,bg4,bg5,bg6;
 		transform: scale(1,1);
 	}
 }
+@keyframes cards2j{
+	0%{
+        top: 200px;
+        left: 250px;
+	    opacity: 0;
+	}
+	100%{
+		left: 70px;
+		top: 50px;
+		opacity: 1;
+	}
+}
+@keyframes cards2z{
+	0%{
+        left: 70px;
+		top: 50px;
+		opacity: 1;
+	}
+	50%{
+		top: 200px;
+        left: 250px;
+	    opacity: 0;
+	}
+}
+@keyframes cards3j{
+	0%{
+        bottom: 200px;
+        left: 250px;
+	    opacity: 0;
+	}
+	100%{
+		left: 70px;
+		bottom: 50px;
+		opacity: 1;
+	}
+}
+@keyframes cards3z{
+	0%{
+        left: 70px;
+		bottom: 50px;
+		opacity: 1;
+	}
+	50%{
+		bottom: 200px;
+        left: 250px;
+	    opacity: 0;
+	}
+}
+@keyframes cards4j{
+	0%{
+        top: 200px;
+        right: 250px;
+	    opacity: 0;
+	}
+	100%{
+		right: 70px;
+		top: 50px;
+		opacity: 1;
+	}
+}
+@keyframes cards4z{
+	0%{
+        right: 70px;
+		top: 50px;
+		opacity: 1;
+	}
+	50%{
+		top: 200px;
+        right: 250px;
+	    opacity: 0;
+	}
+}
+@keyframes cards5j{
+	0%{
+        bottom: 200px;
+        right: 250px;
+	    opacity: 0;
+	}
+	100%{
+		right: 70px;
+		bottom: 50px;
+		opacity: 1;
+	}
+}
+@keyframes cards5z{
+	0%{
+        right: 70px;
+		bottom: 50px;
+		opacity: 1;
+	}
+	50%{
+		bottom: 200px;
+        right: 250px;
+	    opacity: 0;
+	}
+}
+
+
 #gongzuo{
 	width: 100%;
 	/* .cards{
@@ -405,31 +503,39 @@ $images: bg1,bg2,bg3,bg4,bg5,bg6;
 	.cards2{
 		width: 300px;
 	    position: absolute;
-	    top: 50px;
-	    left: 70px;
+	    animation: cards2z 2s ease;
 	}	
 	.cards3{
 		width: 300px;
 		position: absolute;
-		bottom: 50px;
-		left: 70px;
+		animation: cards3z 2s ease;
 	} 
 	.cards4{
 		width: 300px;
 		position: absolute;
-		top: 50px;
-		right: 70px;
+		animation: cards4z 2s ease;
 	} 
 	.cards5{
 		width: 300px;
 		position: absolute;
-		bottom: 50px;
-		right: 70px;
+		animation: cards5z 2s ease;
 	}  
 }
 #section4.active #gongzuo{
     .cards1 .quan{
     	animation: quan 8s ease infinite;
+    }
+    .cards2{
+    	animation: cards2j 2s ease both;
+    }
+    .cards3{
+    	animation: cards3j 2s ease both;
+    }
+    .cards4{
+    	animation: cards4j 2s ease both;
+    }
+    .cards5{
+    	animation: cards5j 2s ease both;
     }
 }
 
